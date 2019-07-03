@@ -11,6 +11,7 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
 
 
  const appRoutes:Routes = [
+  {path:'',component:HomePageComponent},
   {path:'home',component:HomePageComponent},
   {path:'profile',component:ProfilePageComponent},
   {path:'signup',component:SignUpComponent},
