@@ -1,1 +1,76 @@
-<p>landing-page works!</p>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-6 px-0">
+        <div class="img-land">
+          <img src="assets/images/v8.svg" alt="logo">
+          <h5> Volunteering community</h5>
+        </div>
+      </div>
+      <div class="col-6 p-0">
+        <div class="form-holder">
+          <div class="form-contanir">
+              <div class="head-login">
+                  <h2>JOIN OUR AMAZING COMMUNITY </h2>
+                  <form 
+                  #userForm="ngForm"
+                    (ngSubmit)="onSubmit()"
+                    novalidate>
+                    <div class="custom-form">
+                      <div class="form-group">
+                        <label class="form-label"> Enter Email address :</label>
+                  
+                        <input 
+                        #email="ngModel"
+                        [(ngModel)]="userModel.Uemail"
+                        type="email"
+                        required
+                        class="form-control" 
+                        placeholder="example@example.com"
+                        name="Uemail">
+                  
+                          <!-- <div *ngIf=" email.errors && (email.invalid && email.touched)">
+                            <small 
+                            class="form-text text-danger"
+                            *ngIf="email.errors.required"> All fileds are required </small>
+                            <small class="form-text text-danger"
+                            *ngIf="email.errors.pattern">Enter a Valid Email</small>
+                          
+                        </div> -->
+                  
+                      </div>
+                  
+                      <div class="form-group">
+                        <label class="form-label">Password :</label>
+                        <input
+                        [(ngModel)]="userModel.Upassword"
+                        #pass="ngModel"
+                        type="password"
+                        required 
+                        class="form-control"
+                        placeholder="*********" name="Upassword">
+                  
+                          <!-- <div *ngIf=" pass.errors && (pass.invalid || pass.touched)">
+                              <small 
+                              class="form-text text-danger"
+                              *ngIf="pass.errors.required"> All fileds are required </small>
+                              <small class="form-text text-danger"
+                              *ngIf="pass.errors.pattern"> password must be more than 6 numbers</small>
+                            
+                          </div> -->
+                         
+                      </div>
+                      <button 
+                      [disabled]="userForm.form.invalid"
+                       type="submit" 
+                       class="btn custom-btn">logIn</button>
+                  </div>
+                  </form>
+                  <div class="clear-fix"></div>
+                  <div class="link">
+                    <p>Not a Member ? <span><a routerLink="/signup">SignUp</a></span></p>
+                  </div>                  
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
